@@ -1,0 +1,26 @@
+[
+  {
+    "text": "How are you?",
+    "intent": "ask_feelings",
+    "intent_prediction": {
+      "name": "nlu_fallback",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Are you feeling good?",
+    "intent": "ask_feelings",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.4861329197883606
+    }
+  },
+  {
+    "text": "Do you sad?",
+    "intent": "ask_feelings",
+    "intent_prediction": {
+      "name": "nlu_fallback",
+      "confidence": 1.0
+    }
+  }
+]

@@ -1,0 +1,100 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ask name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_name
+  - action: utter_reply_name
+
+- story: ask name and feelings
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_name
+  - action: utter_reply_name
+  - intent: ask_feelings
+  - action: utter_reply_feelings
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: ask feelings
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_feelings
+  - action: utter_reply_feelings
+
+- story: search courses happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_help
+  - intent: courses
+    entities:
+    - course_level: "postgraduate"
+    - course: "Data Science"
+  - action: action_course_search
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: search courses and course_levels
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_help
+  - intent: courses
+    entities:
+      - course: "Data Science"
+  - action: utter_ask_course_levels
+  - intent: course_levels
+    entities:
+      - course_level: "postgraduate"
+  - action: action_course_search
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: search courses and course_levels2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_help
+  - intent: course_levels
+    entities:
+      - course_level: "postgraduate"
+  - action: utter_ask_courses
+  - intent: courses
+    entities:
+      - course: "Data Science"
+  - action: action_course_search
+  - intent: thanks
+  - action: utter_goodbye

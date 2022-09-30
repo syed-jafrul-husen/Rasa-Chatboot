@@ -1,0 +1,208 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hlw
+    - hlo
+    - hi bot
+    - hey bot
+    - hi again
+    - hi folks
+    - hi Mister
+    - hi Mr.
+    - hi miss
+    - hi misses
+    - hi pal!
+    - hi there
+    - greetings
+    - hello everybody
+    - hello is anybody there
+    - hello robot
+    - hi robot
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - bye bot
+    - goodbye friend
+    - bye for now
+    - catch you later
+    - gotta go
+    - see you
+    - i'm off
+    - see you later alligator
+    - we'll speak soon
+    - end
+    - finish
+    - Bye!
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Y
+    - yes sure
+    - absolutely
+    - for sure
+    - sure
+    - definitely
+    - yes, it did.
+    - yes yes yes
+    - yeah
+    - si
+    - ok
+    - okay
+    - okah
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - N
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - not today
+    - no thanks
+    - uh no
+    - noope
+    - nope
+    - do you have something else
+    - no this does not work for me
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - very good
+    - I'm good
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - awful
+    - terrible
+
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - thank you so much
+    - thanks bot
+    - cheers
+    - cheers bro
+    - thanks for your information
+    - ok thanks!
+    - perfect thank you
+    - thanks a bunck for everything
+    - thanks for help me
+    - thanks a lot
+    - tnx
+    - tnq
+    - tnqu
+    - amazing, thanks
+    - cool, thanks
+    - cool thank you
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what are you?
+    - how do you do?
+    - what's up
+
+- intent: ask_name
+  examples: |
+    - What is your name?
+    - Can I know your name?
+    - Could you tell me you name?
+    - Your name please.
+    - How can I call you?
+    - What is your address?
+
+- intent: ask_feelings
+  examples: |
+    - How are you?
+    - What are you doing?
+    - Are you feeling good?
+    - Are you feeling better?
+    - Are you sad?
+    - Are you feeling cold?
+    - Do you sad?
+    - De you feel hot now? 
+
+- intent: course_levels
+  examples: |
+    - [postgraduate]{"entity":"course_level"}
+    - [undergraduate]{"entity":"course_level"}
+    - [undergraduate]{"entity":"course_level"} degree
+    - I want to complete my [undergraduate]{"entity":"course_level"} degree at LSBU
+    - I have planned to study [undergraduate]{"entity":"course_level"} degree
+
+- intent: courses
+  examples: |
+    - [Data Science]{"entity":"course"}
+    - [Computer Science]{"entity":"course"}
+    - [Business Studies]{"entity":"course"}
+    - I want to study [Business Studies]{"entity":"course"} subject
+    - I want to know details about [Business Studies]{"entity":"course"} subject
+    - Can you tell me about [Business Studies]{"entity":"course"} subject?
+    - Can ypu provide more information about [Business Studies]{"entity":"course"} subjetc?

@@ -1,0 +1,82 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - thanks
+  - course_levels
+  - courses
+  - ask_name
+  - ask_feelings
+
+entities:
+  - course_level
+  - course
+
+slots:
+  course_level:
+    type: text
+  course:
+    type: text
+  details:
+    type: unfeaturized
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hello!"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Talk to you later!"
+  - text: "Have a good day"
+  - text: "Untill next time!"
+
+  utter_iamabot:
+  - text: "I am a bot, to assist you."
+
+  utter_ask_help:
+  - text: "How can I help you?"
+  - text: "What are you looking for?"
+  - text: "Which course are you looking for?"
+
+  utter_reply_name:
+  - text: "I am a bot. I will help you to find the course at LSBU"
+  - text: "I am LSBU course finder application. I can help you to find courses"
+  - text: "I am course finder at LSBU"
+
+  utter_reply_feelings:
+  - text: "I am always fine"
+  - text: "Fine"
+  - text: "I'm in good mood now"
+
+  utter_ask_course_levels:
+  - text: "Can you provide your course/program level please(e.g. undergraduate, postgraduate)."
+  - text: "To find the {course} I need to know your intended Course Level"
+
+  utter_ask_courses:
+  - text: "Which subject are you looking for?"
+  - text: "In whcih subject, do you want to study your {course_level} degree?"
+
+actions:
+  - action_course_search
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

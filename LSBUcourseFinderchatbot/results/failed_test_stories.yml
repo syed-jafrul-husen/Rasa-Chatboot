@@ -1,0 +1,48 @@
+version: "2.0"
+stories:
+- story: happy path 1 (C:\Users\44794\AppData\Local\Temp\tmpcadbv19e\46d180e46a8548b984f451a6d5e3262e_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen  # predicted: utter_ask_help
+  - intent: mood_great
+  - action: utter_happy
+- story: happy path 2 (C:\Users\44794\AppData\Local\Temp\tmpcadbv19e\46d180e46a8548b984f451a6d5e3262e_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen  # predicted: utter_ask_help
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+- story: sad path 1 (C:\Users\44794\AppData\Local\Temp\tmpcadbv19e\46d180e46a8548b984f451a6d5e3262e_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen  # predicted: utter_ask_help
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: sad path 2 (C:\Users\44794\AppData\Local\Temp\tmpcadbv19e\46d180e46a8548b984f451a6d5e3262e_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen  # predicted: utter_ask_help
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: sad path 3 (C:\Users\44794\AppData\Local\Temp\tmpcadbv19e\46d180e46a8548b984f451a6d5e3262e_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen  # predicted: utter_ask_help
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
